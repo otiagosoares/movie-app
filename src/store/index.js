@@ -1,4 +1,3 @@
-/*eslint no-unreachable: "error"*/
 import { configureStore } from '@reduxjs/toolkit';
 import moviesReducer from '../pages/Home/moviesSlice';
 
