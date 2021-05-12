@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { FaRegHeart } from 'react-icons/fa';
 import { BiCameraMovie, BiCalendarStar } from 'react-icons/bi';
 import {ContainerMovies, Card} from './styles';
+import { toast } from 'react-toastify';
 
 import Thumb from '../../assets/images/thumb.svg';
 
@@ -17,6 +18,15 @@ function CardMovies(props) {
   const handleAddToFavorites = (movie) =>{
     console.log(movie);
     dispatch(addFavorite(movie));
+    toast.dark('Added to Favorites! =D', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   }
 
   const {movies} = props;

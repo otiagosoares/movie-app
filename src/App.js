@@ -4,12 +4,15 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Details from './pages/DatailsMovie';
 import About from './pages/About';
 import Favorites from './pages/Favorites';
 import NotFout from './pages/404';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -27,6 +30,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    <ToastContainer />
     </div>
   );
 }
