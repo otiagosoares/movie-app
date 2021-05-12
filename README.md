@@ -11,11 +11,13 @@ A API a ser utilizada será a [OMDb](http://www.omdbapi.com/) ao qual o candidat
 - [x] Diferencial: Utilizar alguma biblioteca de controle de estado
 - [ ] Diferencial: >60% de cobertura de testes
 - [x] Diferencial: Styled Components
-- [ z] Diferencial: Criar outras áreas, como por exemplo, filmes prediletos, área de login, etc
+- [x] Diferencial: Criar outras áreas, como por exemplo, filmes prediletos, área de login, etc
 - [ ] Diferencial: Otimizar webpack.
 
 ### Active omdbapi Key 
 [here](http://www.omdbapi.com/apikey.aspx?VERIFYKEY=4ea417ed-6c79-4b14-a04c-ffcdad8d0369)
 
+### Live:
+  [movie-app-tiago-soares.netlify.app/](https://movie-app-tiago-soares.netlify.app/)
 
 
