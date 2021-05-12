@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import {Redirect} from 'react-router-dom';
-import Loading from '../../features/Loading'
 import {fetchMovies} from '../../services/fetchApi';
 
 import {BsStarFill} from 'react-icons/bs';
@@ -10,8 +9,9 @@ import {GiDirectorChair} from 'react-icons/gi';
 import {MdAssignmentTurnedIn, MdNewReleases} from 'react-icons/md';
 import {FaUsers} from 'react-icons/fa';
 import {CgTimelapse} from 'react-icons/cg';
-import {ContainerDtailMovie} from './styles';
-
+import {ContainerDetailMovie} from './styles';
+import Loading from '../../components/Loading';
+import Thumb from '../../assets/images/thumb.svg';
 
 export default function DetailsMovie(props) {
   
@@ -43,10 +43,11 @@ export default function DetailsMovie(props) {
           <section>
             <h1><BiCameraMovie /> {details.Title} ({details.Year})</h1>
             <h2>{details.Genre}</h2>
-            <ContainerDtailMovie>
+            <ContainerDetailMovie>
               <div className="col-1">
                   <h2>Plot <span className='badge'>{details.Type}</span></h2>
-                  <p>{details.Plot}</p>
+                  <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>{details.Plot}</p>
+
                   <p><span className="label-details"><CgAwards /> Awards:</span> {details.Awards} </p>
                   <p><span className="label-details"><BiPencil /> Writer:</span> {details.Writer} </p>
                   <p><span className="label-details"><GiDirectorChair /> Director:</span> {details.Director} </p>
@@ -58,10 +59,10 @@ export default function DetailsMovie(props) {
                   <p><span className="label-details"><MdNewReleases /> Released:</span> {details.Released} </p>
               </div>
               <div className="col-2">
-                <img src={details.Poster} alt={details.Title} />
+                <img src={(details.Poster === 'N/A') ? Thumb : details.Poster} alt={details.Title} />
                 <h2>{details.imdbRating} <BsStarFill/> | {details.imdbVotes} <small>Votes</small></h2>
               </div>
-            </ContainerDtailMovie>      
+            </ContainerDetailMovie>      
           </section>
       : ''}
     </>

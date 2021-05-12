@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerDtailMovie = styled.div`
+export const ContainerDetailMovie = styled.div`
     display:grid;
     height: 100%;
     grid-template-columns: 2fr 1fr 1fr;

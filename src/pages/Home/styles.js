@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const ContainerMovies = styled.div`
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-
-`;
-
 export const ContainerFormSearch = styled.div`
     width: 100%;
     display: flex;

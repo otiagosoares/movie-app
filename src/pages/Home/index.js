@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import Loading from '../../features/Loading'
-import CardMovies from '../../features/CardMovies';
-import { ContainerMovies, ContainerFormSearch} from "./styles";
+import Loading from '../../components/Loading'
+import CardMovies from '../../components/CardMovies';
+import { ContainerFormSearch} from "./styles";
 import {BiMovie} from 'react-icons/bi';
 
-import {selectMovies, loadMoviesAsync, selectLoading } from './moviesSlice';
+import {
+  selectMovies, 
+  loadMoviesAsync, 
+  isLoading, 
+  loadingState } from './moviesSlice';
 
 const Home =  () => {
 
   const [searchText, setSearchText] = useState('');
-  const loading = useSelector(selectLoading);
+  const loading = useSelector(isLoading);
 
   const {movies} = useSelector(selectMovies);
   const dispatch = useDispatch();  
@@ -22,6 +26,10 @@ const Home =  () => {
   const handleChangeTextSearch = (e) => {
     setSearchText(e.target.value);
   }
+
+  useEffect(() => {
+   dispatch(loadingState(false));
+  })
 
   const stylesH1 = {
     justifyContent: 'center',
@@ -44,11 +52,9 @@ const Home =  () => {
       </ContainerFormSearch>
       {(searchText.length > 0) ? <h2>Results for "{searchText}":</h2> : ''}
 
-      {(loading === 0) ? <Loading /> : 
-        <ContainerMovies>
-          {(movies)? <CardMovies movies={movies} /> : <h1>No Results</h1>  }
-        </ContainerMovies>
-      }
+    {(movies) ? <CardMovies movies={movies} />
+      : <h1>No Results</h1>  }
+      {(loading) && <Loading /> }
     </>
   )
 }

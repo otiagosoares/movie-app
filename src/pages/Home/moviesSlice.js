@@ -4,7 +4,7 @@ import { fetchMovies } from '../../services/fetchApi';
 const initialState = {
   movies: [],
   favorites: [],
-  loading: 0,
+  loading: true,
 };
 
 export const loadMoviesAsync = createAsyncThunk('movies/fetchMovies',
@@ -19,30 +19,31 @@ export const loadMoviesAsync = createAsyncThunk('movies/fetchMovies',
 export const moviesSlice = createSlice({
   name: 'movies',
   initialState,
+  loading: true,
   
   reducers: {
     addFavorite: (state, action) => {
       state.favorites = [...state.favorites, action.payload];
     },
+    loadingState: (state, action) => {
+      state.loading = action.payload;
+    }
   
   },
   extraReducers: (builder) => {
     builder
       .addCase(loadMoviesAsync.pending, (state) => {
-        console.log('state', state.loading)
-        state.loading = 1;
+        state.loading = true;
       })
       .addCase(loadMoviesAsync.fulfilled, (state, action) => {
-        console.log('state', state.loading)
-        state.loading = 0;
+        state.loading = '';
         state.movies = action.payload;
       });
   },
 });
 
-export const { load } = moviesSlice.actions;
-
-export const selectLoading= (state) => state.loading;
-
+export const { addFavorite, loadingState } = moviesSlice.actions;
+export const isLoading= (state) => state.movies.loading;
 export const selectMovies = (state) => state.movies;
+export const selectFavorites = (state) => state.movies.favorites;
 export default moviesSlice.reducer;

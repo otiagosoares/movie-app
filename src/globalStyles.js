@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
   }
   a, button{
     cursor: pointer;
+    text-decoration: none;
+  }
+  a:active{
+    color: var(--color-theme);
   }
   h1{
     font-weight: 500;
