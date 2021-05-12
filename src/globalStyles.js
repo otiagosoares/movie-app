@@ -47,6 +47,11 @@ const GlobalStyle = createGlobalStyle`
     padding-left: 230px;
   }
 
+  @media(max-width: 600px){
+    .page-content{
+      padding-left: 30px;
+    }  
+  }
 
 `;
  

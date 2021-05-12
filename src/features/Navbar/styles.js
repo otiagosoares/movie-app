@@ -6,6 +6,7 @@ export const ContainerNavbar = styled.div`
   top: 0;
   height: 100vh;   
   min-width: 200px;
+  transition: ease-in-out .3s;
 
   ul.nav-ul{
     height: 100vh;
@@ -53,5 +54,9 @@ export const ContainerNavbar = styled.div`
       transition: .2s;
     }
 
+
+  }
+  @media(max-width: 600px){
+    left: -200px;
   }
 `;

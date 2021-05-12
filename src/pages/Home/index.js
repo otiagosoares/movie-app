@@ -9,7 +9,7 @@ import {selectMovies, loadMoviesAsync, selectLoading } from './moviesSlice';
 
 const Home =  () => {
 
-  const [searchText, setSearchText] = useState('fast');
+  const [searchText, setSearchText] = useState('');
   const loading = useSelector(selectLoading);
 
   const {movies} = useSelector(selectMovies);
@@ -35,13 +35,14 @@ const Home =  () => {
       <ContainerFormSearch>
         <input type="search" 
           value={searchText} 
-          placeholder="Type Title Movie"
+          placeholder="Type a Title..."
           onChange={handleChangeTextSearch}
           />
         <button onClick={() => HandleLoadMoviesByTitle(searchText)}>
           Search Movie
         </button>
       </ContainerFormSearch>
+      {(searchText.length > 0) ? <h2>Results for "{searchText}":</h2> : ''}
 
       {(loading === 0) ? <Loading /> : 
         <ContainerMovies>

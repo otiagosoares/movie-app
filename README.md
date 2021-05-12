@@ -7,11 +7,11 @@ A API a ser utilizada será a [OMDb](http://www.omdbapi.com/) ao qual o candidat
 
 - [x] Layout bem feito
 - [x] Código organizado
-- [] Deve publicar o projeto como publico no Github
+- [x] Deve publicar o projeto como publico no Github
 - [x] Diferencial: Utilizar alguma biblioteca de controle de estado
 - [ ] Diferencial: >60% de cobertura de testes
 - [x] Diferencial: Styled Components
-- [ ] Diferencial: Criar outras áreas, como por exemplo, filmes prediletos, área de login, etc
+- [ z] Diferencial: Criar outras áreas, como por exemplo, filmes prediletos, área de login, etc
 - [ ] Diferencial: Otimizar webpack.
 
 ### Active omdbapi Key 
