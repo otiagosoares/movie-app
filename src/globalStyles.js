@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle`
   img{
     width: 100%;
   }
+  ul{
+    list-style-type: disclosure-closed;
+  }
+  ul li{
+    line-height: 2em;
+  }
   html, body {
     font-size: 1em;
     margin: 0;

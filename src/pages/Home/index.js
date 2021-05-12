@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Loading from '../../components/Loading'
 import CardMovies from '../../components/CardMovies';
-import { ContainerFormSearch} from "./styles";
 import {BiMovie} from 'react-icons/bi';
+import { ContainerFormSearch} from "./styles";
 
 import {
   selectMovies, 
@@ -53,7 +53,7 @@ const Home =  () => {
       {(searchText.length > 0) ? <h2>Results for "{searchText}":</h2> : ''}
 
     {(movies) ? <CardMovies movies={movies} />
-      : <h1>No Results</h1>  }
+      : <h1>0 Results</h1>  }
       {(loading) && <Loading /> }
     </>
   )

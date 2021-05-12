@@ -25,8 +25,13 @@ export const ContainerNavbar = styled.div`
       text-align: center;
       position:relative;
     }
+    li a:hover,
+    li a.active{
+      font-weight: 500;
+    }
 
-    li a:before, li a.active:before{
+    li a:before, 
+    li a.active:before{
       content: '';
       position: absolute;
       background-color: var(--color-theme);

@@ -7,7 +7,7 @@ export const BtnAddFavorite = styled.span`
   top: .5em;
   right: .5em;
   color: var(--color-theme);
-  transition: all .2s;
+  transition: all .1s;
   transform: scale(1.2);
   animation: pulse-purple 2s infinite;
   

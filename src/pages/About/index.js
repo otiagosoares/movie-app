@@ -1,5 +1,5 @@
 import React from 'react'
-import {DiGithubFull} from 'react-icons/di';
+import {FaGithub} from 'react-icons/fa';
 import {FiLinkedin} from 'react-icons/fi';
 import {BiWorld} from 'react-icons/bi';
 
@@ -20,11 +20,11 @@ export default function index() {
         <li>Diferencial: Criar outras áreas, como por exemplo, filmes prediletos, área de login, etc</li>
         <li>Diferencial: Otimizar webpack.</li>
       </ul>
-      <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '2em'}}>
+      <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '3em'}}>
         <div style={{textAlign: 'center'}}>
           <a href="https://github.com/otiagosoares/movie-app" target="_blank"  rel="noreferrer">
-            Projeto no <br />
-            <span style={{fontSize: '4em'}}> <DiGithubFull /></span>
+            Projeto no GitHub: <br />
+            <span style={{fontSize: '2em'}}> <FaGithub /></span>
           </a>
         </div>
         <div style={{textAlign: 'center'}}>
@@ -39,6 +39,9 @@ export default function index() {
             <span style={{fontSize: '2em'}}> <BiWorld /></span>
           </a>
         </div>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'center', marginTop: '4em'}}>
+       <p> Desenvolvido por <a href="https://tiagosoares.com.br/"><b>Tiago Soares</b></a></p>
       </div>
     </div>
   )
