@@ -34,4 +34,16 @@ export const ContainerFormSearch = styled.div`
         padding: 0 1em;
         transition: all .2s;
     }
+
+    @media(max-width: 450px){
+        input[type='search']:focus,
+        input[type='search']{
+            width: 90%;
+        }
+        button{
+            width: 90%;
+            height: 40px;
+            margin-top: 10px;
+        }
+    }
 `;

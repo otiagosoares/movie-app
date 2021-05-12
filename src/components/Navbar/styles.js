@@ -6,7 +6,8 @@ export const ContainerNavbar = styled.div`
   top: 0;
   height: 100vh;   
   min-width: 200px;
-  transition: ease-in-out .3s;
+  transition: ease-in-out .2s;
+  z-index: 998;
 
   ul.nav-ul{
     height: 100vh;
@@ -61,7 +62,32 @@ export const ContainerNavbar = styled.div`
 
 
   }
+  
+  &.open{
+    left: 0 !important;
+  }
+
+  .btn-hanburguer{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: #fff; 
+    position: absolute;
+    color: var(--theme-color);
+    top: 1em;
+    right: -39px;
+    width: 40px;
+    height: 40px;
+    svg{
+      font-size: 2em;
+      color: var(--color-theme);
+    }
+  }
   @media(max-width: 600px){
     left: -200px;
+    .btn-hanburguer{
+      visibility: visible;
+    }
   }
 `;
