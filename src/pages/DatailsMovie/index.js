@@ -11,6 +11,7 @@ import {FaUsers} from 'react-icons/fa';
 import {CgTimelapse} from 'react-icons/cg';
 import {ContainerDetailMovie} from './styles';
 import Loading from '../../components/Loading';
+import ButtonAddFavorite from '../../components/ButtonAddFavorite';
 import Thumb from '../../assets/images/thumb.svg';
 
 export default function DetailsMovie(props) {
@@ -44,6 +45,7 @@ export default function DetailsMovie(props) {
             <h1><BiCameraMovie /> {details.Title} ({details.Year})</h1>
             <h2>{details.Genre}</h2>
             <ContainerDetailMovie>
+              <ButtonAddFavorite movie={details} />
               <div className="col-1">
                   <h2>Plot <span className='badge'>{details.Type}</span></h2>
                   <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>{details.Plot}</p>

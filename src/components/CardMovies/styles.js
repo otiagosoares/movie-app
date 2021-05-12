@@ -23,16 +23,6 @@ export const Card = styled.article`
   a{
     text-decoration: none;
   }
-  .btn-favorite{
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    color: var(--color-theme);
-    transition: all .2s;
-  }
-  .btn-favorite:hover{
-    transform: scale(1.2);
-  }
  
   &:hover{
       transform: scale(1.02);

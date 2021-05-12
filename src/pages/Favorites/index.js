@@ -10,7 +10,7 @@ export default function Favorites() {
   return (
     <div>
       <h1>Favorites</h1>
-      {favorites.length ? <CardMovies movies={favorites} /> : <h2> # No favorite movies</h2>}
+      {favorites.length ? <CardMovies movies={favorites} isFavorite={true}/> : <h2> # No favorite movies</h2>}
     </div>
   )
 }
