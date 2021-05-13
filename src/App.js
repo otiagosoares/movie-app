@@ -23,15 +23,18 @@ const DatailsMovie = Loadable({
   loader: () => import('./pages/DatailsMovie'),
   loading: Loading
 });
+
 const About = Loadable({
   loader: () => import('./pages/About'),
   loading: Loading
 });
+
 const Favorites = Loadable({
   loader: () => import('./pages/Favorites'),
   loading: Loading,
-  dalay: 60
+  delay: 60
 });
+
 const NotFoud = Loadable({
   loader: () => import('./pages/404'),
   loading: Loading
@@ -40,19 +43,19 @@ const NotFoud = Loadable({
 function App() {
   return (
     <div className="Movies-app">
-    <Router>
-      <Navbar />
-      <div className="page-content">
-      <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/details/:id" component={DatailsMovie} />
-            <Route path="/favorite-movies" component={Favorites} />
-            <Route path="*" component={NotFoud} />
-        </Switch>
-      </div>
-    </Router>
-    <ToastContainer />
+      <Router>
+        <Navbar />
+        <div className="page-content">
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/details/:id" component={DatailsMovie} />
+              <Route path="/favorite-movies" component={Favorites} />
+              <Route path="*" component={NotFoud} />
+          </Switch>
+        </div>
+      </Router>
+      <ToastContainer />
     </div>
   );
 }
